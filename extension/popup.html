@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsLens - Bias Analyzer</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icons/icon.svg" alt="NewsLens Logo" class="logo">
+      <h1>NewsLens</h1>
+    </div>
+    
+    <div class="content">
+      <div class="tabs">
+        <button id="analyzeTabBtn" class="tab-btn active">Analyze Article</button>
+        <button id="historyTabBtn" class="tab-btn">History</button>
+      </div>
+      
+      <div id="analyzeTab" class="tab-content active">
+        <p class="description">Analyze the current page or paste a news article URL/text:</p>
+        
+        <div class="action-buttons">
+          <button id="analyzePage" class="primary-btn">Analyze Current Page</button>
+          <div class="or-divider">OR</div>
+          <div class="input-group">
+            <input type="text" id="articleInput" placeholder="Paste URL or article text...">
+            <button id="analyzeInput" class="secondary-btn">Analyze</button>
+          </div>
+        </div>
+        
+        <div class="options">
+          <label class="checkbox-container">
+            <input type="checkbox" id="findRelatedSources" checked>
+            <span class="checkmark"></span>
+            Find related sources
+          </label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="generateNeutral" checked>
+            <span class="checkmark"></span>
+            Generate neutral version
+          </label>
+        </div>
+      </div>
+      
+      <div id="historyTab" class="tab-content">
+        <p class="description">Recent article analyses:</p>
+        <div id="historyList" class="history-list">
+          <!-- History items will be inserted here dynamically -->
+          <div class="empty-history">No analysis history yet</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <button id="openSettings" class="icon-btn">⚙️</button>
+      <button id="openFullApp" class="text-btn">Open Full App</button>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

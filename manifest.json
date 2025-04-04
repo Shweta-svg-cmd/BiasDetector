@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "NewsLens - Bias Analyzer",
+  "version": "1.0.0",
+  "description": "Analyze news articles for bias and compare with coverage from major US news sources.",
+  "action": {
+    "default_popup": "extension/popup.html",
+    "default_icon": {
+      "16": "extension/icons/icon16.png",
+      "48": "extension/icons/icon48.png",
+      "128": "extension/icons/icon128.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "extension/background.js"
+  },
+  "icons": {
+    "16": "extension/icons/icon16.png",
+    "48": "extension/icons/icon48.png",
+    "128": "extension/icons/icon128.png"
+  },
+  "options_page": "extension/options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["extension/content.js"]
+    }
+  ]
+}

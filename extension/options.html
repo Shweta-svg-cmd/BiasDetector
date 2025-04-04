@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewsLens Settings</title>
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    body {
+      min-width: 500px;
+      padding: 24px;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      margin-bottom: 24px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    
+    .input-container {
+      position: relative;
+    }
+    
+    .toggle-password {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+    
+    .api-description {
+      margin-top: 8px;
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 32px;
+    }
+    
+    .success-message {
+      color: var(--success);
+      font-size: 14px;
+      margin-top: 8px;
+      display: none;
+    }
+    
+    .success-message.visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>NewsLens Settings</h1>
+    
+    <div class="form-group">
+      <label for="openaiKey">OpenAI API Key</label>
+      <div class="input-container">
+        <input 
+          type="password" 
+          id="openaiKey" 
+          placeholder="sk-..."
+          class="full-width-input"
+        >
+        <button class="toggle-password" data-for="openaiKey">Show</button>
+      </div>
+      <div class="api-description">
+        Required for bias analysis and generating neutral versions of articles.
+        Get your API key from <a href="https://platform.openai.com/api-keys" target="_blank" class="link">OpenAI</a>.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="newsapiKey">News API Key</label>
+      <div class="input-container">
+        <input 
+          type="password" 
+          id="newsapiKey" 
+          placeholder="Your News API key"
+          class="full-width-input"
+        >
+        <button class="toggle-password" data-for="newsapiKey">Show</button>
+      </div>
+      <div class="api-description">
+        Required for finding the same news story across different sources.
+        Get your API key from <a href="https://newsapi.org/register" target="_blank" class="link">NewsAPI</a>.
+      </div>
+    </div>
+    
+    <div class="button-group">
+      <button id="resetBtn" class="secondary-btn">Reset</button>
+      <button id="saveBtn" class="primary-btn">Save Settings</button>
+    </div>
+    
+    <div id="successMessage" class="success-message">
+      Settings saved successfully!
+    </div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

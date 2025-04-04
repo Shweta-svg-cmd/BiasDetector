@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="16" fill="url(#gradient)" />
+  <g fill="#FFFFFF">
+    <!-- Newspaper icon -->
+    <path d="M32 36h48v8H32zM32 52h64v4H32zM32 60h64v4H32zM32 68h64v4H32zM32 76h32v4H32z" />
+    <!-- Gauge/Meter element -->
+    <path d="M84 80c0 11.046-8.954 20-20 20s-20-8.954-20-20 8.954-20 20-20 20 8.954 20 20z" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <path d="M64 80l-8-12" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="64" cy="80" r="4" />
+  </g>
+</svg>
