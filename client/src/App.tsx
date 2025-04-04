@@ -21,7 +21,8 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex flex-col min-h-screen">
+       <ThemeProvider>
+       <div className="flex flex-col min-h-screen bg-background">
         <NavBar />
         <div className="flex-grow">
           <Router />
