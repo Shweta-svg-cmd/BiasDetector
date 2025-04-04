@@ -25,12 +25,6 @@ const NavBar = () => {
               <Link href="/news-analysis">
                 <a className="text-foreground/60 hover:text-foreground px-3 py-2 text-sm font-medium">News Analysis</a>
               </Link>
-              <Link href="/testimonials">
-                <a className="text-foreground/60 hover:text-foreground px-3 py-2 text-sm font-medium">Testimonials</a>
-              </Link>
-              <Link href="/pricing">
-                <a className="text-foreground/60 hover:text-foreground px-3 py-2 text-sm font-medium">Pricing</a>
-              </Link>
             </div>
           </div>
           <div className="flex items-center gap-4">
