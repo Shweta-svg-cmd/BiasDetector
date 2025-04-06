@@ -1,5 +1,5 @@
 // Base API URL - update this to your deployed API endpoint
-const API_BASE_URL = 'https://rest-express.username.repl.co/api';
+const API_BASE_URL = 'https://biasdetector.onrender.com/';
 
 // Listen for messages from popup or content scripts
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
